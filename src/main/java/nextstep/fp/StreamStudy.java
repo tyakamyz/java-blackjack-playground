@@ -43,6 +43,6 @@ public class StreamStudy {
 
         return numbers.stream().filter(n -> n > 3)
                 .map(n -> n * 2).collect(Collectors.toList())
-                .stream().reduce(0, (x, y) -> x + y);
+                .stream().reduce(0, Integer::sum);
     }
 }
