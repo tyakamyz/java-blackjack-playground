@@ -14,6 +14,6 @@ public class Users {
             new User("honux", 45));
 
     User getUser(String name) {
-        return users.stream().filter(user -> user.getName().equals(name)).findAny().orElse(DEFAULT_USER);
+        return users.stream().filter(user -> user.matchName(name)).findAny().orElse(DEFAULT_USER);
     }
 }
