@@ -21,4 +21,17 @@ public class Cards {
             this.decks.add(new Card(type, i));
         }
     }
+
+    public Card chooseCard(){
+        int randomNumber = (int) (Math.random() * (this.decks.size()));
+        Card chooseCard = decks.get(randomNumber);
+
+        deleteCard(randomNumber);
+
+        return chooseCard;
+    }
+
+    private void deleteCard(int index){
+        decks.remove(index);
+    }
 }
