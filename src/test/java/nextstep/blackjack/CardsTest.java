@@ -24,4 +24,19 @@ class CardsTest {
 
         assertThat(cards.decks.size()).isEqualTo(51);
     }
+
+    @Test
+    void getSum() {
+        Cards cards = new Cards();
+        cards.addCard(new Card(Card.Type.CLOVER, 1));
+        cards.addCard(new Card(Card.Type.HEART, 10));
+
+        assertThat(cards.getSum()).isEqualTo(21);
+
+        cards = new Cards();
+        cards.addCard(new Card(Card.Type.CLOVER, 1));
+        cards.addCard(new Card(Card.Type.HEART, 11));
+
+        assertThat(cards.getSum()).isEqualTo(12);
+    }
 }
