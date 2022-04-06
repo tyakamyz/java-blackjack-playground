@@ -1,7 +1,7 @@
 package nextstep.blackjack;
 
 public abstract class Player {
-    int bettingAmount;
-    Cards cards;
+    public Cards cards;
 
+    public abstract void startCardsSetting(Cards cardDeck);
 }

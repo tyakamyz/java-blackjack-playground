@@ -31,7 +31,31 @@ public class Cards {
         return chooseCard;
     }
 
+    public void addCard(Card card){
+        decks.add(card);
+    }
+
     private void deleteCard(int index){
         decks.remove(index);
+    }
+
+    public int getSum() {
+        /* Ace 카드 제외하고 계산 */
+        int result = this.decks.stream().mapToInt(card -> card.number).filter(n -> n != 1).sum();
+
+        /* Ace 카드 일 경우 1 또는 11로 점수 계산 */
+        if(this.decks.stream().mapToInt(card -> card.number).anyMatch(n -> n == 1)){
+            result = getSumAceCard(result);
+        }
+
+        return result;
+    }
+
+    private int getSumAceCard(int result) {
+        if (result > 10) {
+            return result + 1;
+        }
+
+        return result + 11;
     }
 }
