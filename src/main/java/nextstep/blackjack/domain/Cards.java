@@ -1,10 +1,10 @@
-package nextstep.blackjack;
+package nextstep.blackjack.domain;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cards {
-    List<Card> decks;
+    public List<Card> decks;
 
     public Cards(){
         this.decks = new ArrayList<>();
@@ -57,5 +57,15 @@ public class Cards {
         }
 
         return result + 11;
+    }
+
+    public List<String> getCards() {
+        List<String> cards = new ArrayList<>();
+
+        for(Card card : decks){
+            cards.add(card.getCard());
+        }
+
+        return cards;
     }
 }
