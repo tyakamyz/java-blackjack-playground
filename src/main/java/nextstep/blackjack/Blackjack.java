@@ -43,10 +43,6 @@ public class Blackjack {
             System.out.println();
             dealer.cardsSumCheck(cardDeck);
         }
-        System.out.println();
-
-        /* 최종 점수 계산 */
-        //finalScore()
 
         /* 게임 최종 메세지 */
         gameEndMessage(gamers, dealer);
