@@ -1,8 +1,14 @@
 package nextstep.blackjack.domain.state;
 
-public class Blackjack extends Finished{
+import nextstep.blackjack.domain.card.Cards;
+
+public class Blackjack extends Finished {
+    public Blackjack(final Cards cards) {
+        super(cards);
+    }
+
     @Override
-    double earningRate() {
-        return 0;
+    public double earningRate() {
+        return 1.5;
     }
 }
