@@ -1,7 +1,7 @@
 package nextstep.blackjack.domain.state;
 
 import nextstep.blackjack.domain.card.Cards;
-import nextstep.blackjack.domain.card.PlayingCard;
+import nextstep.blackjack.domain.card.Card;
 
 public abstract class Finished extends Started{
 
@@ -12,7 +12,7 @@ public abstract class Finished extends Started{
     abstract public double earningRate();
 
     @Override
-    public State draw(PlayingCard playingCard) {
+    public State draw(Card card) {
         return null;
     }
 

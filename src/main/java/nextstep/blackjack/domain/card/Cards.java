@@ -3,9 +3,9 @@ package nextstep.blackjack.domain.card;
 import java.util.List;
 
 public class Cards {
-    List<PlayingCard> cards;
+    List<Card> cards;
 
-    public void add(PlayingCard card) {
+    public void add(Card card) {
     }
 
     public boolean isBust() {

@@ -1,11 +1,11 @@
 package nextstep.blackjack.domain.state;
 
 import nextstep.blackjack.domain.card.Cards;
-import nextstep.blackjack.domain.card.PlayingCard;
+import nextstep.blackjack.domain.card.Card;
 
 public interface State {
 
-    State draw(PlayingCard playingCard);
+    State draw(Card card);
 
     State stay();
 
